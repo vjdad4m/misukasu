@@ -4,3 +4,4 @@ dist/
 misukasu.egg-info/
 notebooks/
 scripts/
+out/
