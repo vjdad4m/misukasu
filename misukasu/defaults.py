@@ -19,6 +19,7 @@ MAX_MATCH_DISTANCE = 0.06 # 60ms
 
 # global settings
 DEBUG = True
+LOG_RATE = 10
 
 def debug_print(s):
-    if DEBUG: print('[DEBUG]', s) 
+    if DEBUG: print('[DEBUG]', s)

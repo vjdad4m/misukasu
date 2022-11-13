@@ -18,3 +18,7 @@ setup(name='misukasu',
       install_requires=['numpy'], # TODO: requirements
       python_requires='>=3.8',
       include_package_data=True)
+
+os.makedirs('out/', exist_ok = True)
+os.makedirs('out/camera/', exist_ok = True)
+os.makedirs('out/radar/', exist_ok = True)
