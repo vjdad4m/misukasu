@@ -38,6 +38,7 @@ class SensorCamera():
         self.capture = cv2.VideoCapture(device_id)
         self.capture.set(cv2.CAP_PROP_FRAME_WIDTH, defaults.FRAME_WIDTH)
         self.capture.set(cv2.CAP_PROP_FRAME_HEIGHT, defaults.FRAME_HEIGHT)
+        self.capture.set(cv2.CAP_PROP_FPS, 30)
         self.ready = True
 
     def get_frame(self):

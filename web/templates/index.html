@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>misukasu</title>
+</head>
+<body>
+      <div class="container">
+          <div class="row">
+              <div class="col-lg-8  offset-lg-2">
+                  <h3 class="mt-5">misukasu sensor feed</h3>
+                  <div class="feeds">
+                        <img src="{{ url_for('camera_feed') }}" width="40%">
+                        <img src="{{ url_for('radar_feed') }}" width="40%">
+                  </div>
+              </div>
+          </div>
+      </div>
+</body>
+</html>

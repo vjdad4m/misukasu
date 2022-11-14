@@ -97,6 +97,9 @@ def measure(args):
     t_end = time.time()
 
     print(f'Finished measurement, captured {n_samples} samples, took {t_end - t_start} seconds.')
+    
+    mes.camera.release()
+    mes.radar.release()
 
 if __name__ == '__main__':
     parser = argparse.ArgumentParser()

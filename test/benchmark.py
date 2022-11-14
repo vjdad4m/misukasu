@@ -41,10 +41,10 @@ if __name__ == '__main__':
 
     print('selected test duration:', test_duration, 'seconds')
 
-    print('running camera benchmark...')
+    print('- running camera benchmark...')
     frames = test_camera(test_duration)
     print_stats(frames, test_duration)
 
-    print('running radar benchmark...')
+    print('- running radar benchmark...')
     frames = test_radar(test_duration)
     print_stats(frames, test_duration)
