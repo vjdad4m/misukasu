@@ -1,5 +1,5 @@
-import time
 import argparse
+import time
 from threading import Thread
 
 import cv2

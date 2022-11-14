@@ -33,9 +33,9 @@ class SensorRadar():
         wlbt.Clean()
 
 class SensorCamera():
-    def __init__(self):
+    def __init__(self, device_id = defaults.DEVICE_ID):
         self.ready = False
-        self.capture = cv2.VideoCapture(defaults.DEVICE_ID)
+        self.capture = cv2.VideoCapture(device_id)
         self.capture.set(cv2.CAP_PROP_FRAME_WIDTH, defaults.FRAME_WIDTH)
         self.capture.set(cv2.CAP_PROP_FRAME_HEIGHT, defaults.FRAME_HEIGHT)
         self.ready = True
