@@ -15,7 +15,7 @@ MAX_R = 400
 RES_R = 10
 
 # measurement config
-MAX_MATCH_DISTANCE = 0.06 # 60ms
+MAX_MATCH_DISTANCE = 0.1 # 100ms
 
 # global settings
 DEBUG = True

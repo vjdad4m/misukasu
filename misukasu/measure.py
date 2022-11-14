@@ -88,7 +88,7 @@ def measure(args):
 
         if args.display:
             cv2.imshow('misukasu - camera', lcamera.data)
-            cv2.imshow('misukasu - radar', lradar.data)
+            cv2.imshow('misukasu - radar', cv2.resize(lradar.data[:, :, 0], (0, 0), fx=4, fy=4))
 
             if cv2.waitKey(1) in [ord('q'), 27]:
                 cv2.destroyAllWindows()

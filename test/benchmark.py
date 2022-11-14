@@ -33,7 +33,6 @@ def print_stats(n_frames, duration):
     print('test took', duration, 'seconds')
     print('resulting in', n_frames / duration, 'fps')
 
-
 if __name__ == '__main__':
     parser = argparse.ArgumentParser()
     parser.add_argument('--duration', type = int, default = 10)
@@ -41,7 +40,7 @@ if __name__ == '__main__':
     test_duration = args.duration
 
     print('selected test duration:', test_duration, 'seconds')
-    
+
     print('running camera benchmark...')
     frames = test_camera(test_duration)
     print_stats(frames, test_duration)
