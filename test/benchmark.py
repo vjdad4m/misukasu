@@ -16,6 +16,7 @@ def test_camera(test_duration):
     cam.release()
     return n_frames
 
+
 def test_radar(test_duration):
     radar = SensorRadar()
     n_frames = 0
@@ -28,14 +29,16 @@ def test_radar(test_duration):
     radar.release()
     return n_frames
 
+
 def print_stats(n_frames, duration):
     print('received', n_frames, 'frames')
     print('test took', duration, 'seconds')
     print('resulting in', n_frames / duration, 'fps')
 
+
 if __name__ == '__main__':
     parser = argparse.ArgumentParser()
-    parser.add_argument('--duration', type = int, default = 10)
+    parser.add_argument('--duration', type=int, default=10)
     args = parser.parse_args()
     test_duration = args.duration
 

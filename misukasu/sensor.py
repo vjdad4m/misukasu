@@ -17,7 +17,7 @@ class SensorRadar():
         wlbt.SetArenaPhi(defaults.MIN_P, defaults.MAX_P, defaults.RES_P)
         wlbt.Start()
         self.ready = True
-    
+
     def get_frame(self):
         if self.ready:
             self.ready = False
@@ -32,8 +32,9 @@ class SensorRadar():
         wlbt.Disconnect()
         wlbt.Clean()
 
+
 class SensorCamera():
-    def __init__(self, device_id = defaults.DEVICE_ID):
+    def __init__(self, device_id=defaults.DEVICE_ID):
         self.ready = False
         self.capture = cv2.VideoCapture(device_id)
         self.capture.set(cv2.CAP_PROP_FRAME_WIDTH, defaults.FRAME_WIDTH)
@@ -46,7 +47,8 @@ class SensorCamera():
             self.ready = False
             ret, frame = self.capture.read()
             if ret:
-                frame = np.array(cv2.cvtColor(frame, cv2.COLOR_BGR2RGB)).astype(np.uint8)
+                frame = np.array(cv2.cvtColor(
+                    frame, cv2.COLOR_BGR2RGB)).astype(np.uint8)
                 self.ready = True
                 return frame
             self.ready = True

@@ -15,11 +15,13 @@ MAX_R = 400
 RES_R = 10
 
 # measurement config
-MAX_MATCH_DISTANCE = 0.1 # 100ms
+MAX_MATCH_DISTANCE = 0.1  # 100ms
 
 # global settings
 DEBUG = True
 LOG_RATE = 10
 
+
 def debug_print(s):
-    if DEBUG: print('[DEBUG]', s)
+    if DEBUG:
+        print('[DEBUG]', s)
