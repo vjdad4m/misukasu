@@ -5,7 +5,7 @@ class Camera(Sensor):
     def __init__(self, device_id = 0):
         super().__init__()
         import cv2
-        self.cap = cv2.VideoCapture(device_id)
+        self.cap = cv2.VideoCapture(device_id, cv2.CAP_DSHOW)
     
     def get_measurement(self):
         ret, frame = self.cap.read()
